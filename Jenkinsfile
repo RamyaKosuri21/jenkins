@@ -32,7 +32,7 @@ pipeline {
       when {
         beforeAgent true
         beforeInput true
-        anyof{
+        anyOf{
           environment name: 'ENV', value: 'qa'
           environment name: 'ENV', value: 'dev'
         }
