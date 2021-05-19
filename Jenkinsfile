@@ -30,16 +30,16 @@ pipeline {
 
     stage('stage1') {
       when {
-      beforeAgent true
-      beforeInput true
-      anyof{
-        environment name: 'ENV', value: 'qa'
-        environment name: 'ENV', value: 'dev'
+        beforeAgent true
+        beforeInput true
+        anyof{
+          environment name: 'ENV', value: 'qa'
+          environment name: 'ENV', value: 'dev'
         }
       }
       input{
-      message "Should we continue?"
-      ok "Yes, we should."
+        message "Should we continue?"
+        ok "Yes, we should."
       }
       environment{
        SURL= "stage.google.com"
