@@ -4,6 +4,10 @@ pipeline {
       label 'workstation'
 }
 }
+  options {
+  disableConcurrentBuilds()
+  buildDiscarder(logRotator(numToKeepStr: '1'))
+  }
   environment{
     SURL = "pipeline.google.com"
     CREDS = credentials('CENTOS')
