@@ -30,8 +30,12 @@ pipeline {
 
     stage('stage1') {
       when {
+      beforeAgent true
+      beforeInput true
+      anyof{
         environment name: 'ENV', value: 'qa'
         environment name: 'ENV', value: 'dev'
+        }
       }
       input{
       message "Should we continue?"
