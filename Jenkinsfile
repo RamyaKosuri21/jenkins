@@ -19,6 +19,9 @@ pipeline {
 
     password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
       }
+  tools{
+    nodejs 'node'
+  }
   environment{
     SURL = "pipeline.google.com"
     CREDS = credentials('CENTOS')
