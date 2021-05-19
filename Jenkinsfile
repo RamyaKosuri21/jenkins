@@ -6,13 +6,13 @@ pipeline {
 }
   stages {
 
-    stage('sample') {
+    stage('stage1') {
       steps {
         sh 'echo Hello stage1'
         }
 
     }
-    stage('sample') {
+    stage('stage2') {
       steps {
           sh 'echo Hello stage2'
           }
