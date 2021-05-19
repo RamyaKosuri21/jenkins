@@ -66,24 +66,18 @@ pipeline {
            }
        }
 
-    stage('Parallel Stages')
-       {
-       parallel
-       {
-         stage('sleep-30')
-       {
-           steps
-       {
+    stage('Parallel Stages'){
+       parallel{
+         stage('sleep-30'){
+           steps{
              sh 'sleep 30'
-       }
-       }
-         stage('sleep-60')
-       {
-           steps
-       {
+           }
+         }
+         stage('sleep-60'){
+           steps {
              sh 'sleep 60'
+           }
+         }
        }
-       }
-}
-}
+    }
 }
