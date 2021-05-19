@@ -5,12 +5,12 @@ pipeline {
 }
 }
   environment{
-  URL = "pipeline.google.com"
+    URL = "pipeline.google.com"
   }
   stages {
 
     stage('stage1') {
-    environment{
+      environment{
     URL= "stage.google.com"
     }
       steps {
