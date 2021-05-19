@@ -1,10 +1,21 @@
 pipeline {
-    agent any
+    agent {
+    node{
+    label 'workstation'}
+    }
+    }
     stages {
         stage('sample') {
             steps {
-                echo 'sample jenkins'
+                sh 'echo Hello stage1'
             }
         }
+    stages {
+         stage('sample') {
+            steps {
+                     sh 'echo Hello stage2'
+                 }
+             }
+
     }
 }
