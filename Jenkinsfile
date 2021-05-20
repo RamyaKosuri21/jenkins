@@ -80,10 +80,10 @@ pipeline {
              sh 'sleep 60'
            }
          }
+      }
     }
   }
 }
-
 
 
 
