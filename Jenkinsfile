@@ -51,7 +51,7 @@ pipeline {
 
     }
     stage('stage2') {
-  when {
+      when {
           environment name: 'ENV', value: 'prod'
         }
       steps {
@@ -66,8 +66,8 @@ pipeline {
                    }
                }
 
-  stage('Parallel Stages'){
-    parallel{
+    stage('Parallel Stages'){
+      parallel{
 
          stage('sleep-30'){
            steps{
