@@ -43,11 +43,11 @@ pipeline {
       }
       environment{
        SURL= "stage.google.com"
-    }
+      }
       steps {
         sh 'echo Hello stage1, URL = ${SURL}, CREDS =${CREDS}'
         sh 'npm install'
-        }
+      }
 
     }
     stage('stage2') {
@@ -56,15 +56,14 @@ pipeline {
         }
       steps {
           sh 'echo Hello stage2, URL = ${SURL}'
-          }
       }
-
     }
      post {
-              always {
-                 echo 'I will always say Hello again!'
-                   }
-               }
+       always {
+           echo 'I will always say Hello again!'
+       }
+
+     }
 
     stage('Parallel Stages'){
       parallel{
@@ -83,7 +82,7 @@ pipeline {
       }
     }
   }
-}
+
 
 
 
