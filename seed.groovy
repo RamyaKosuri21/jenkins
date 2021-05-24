@@ -1,4 +1,4 @@
-//; Frontend CI comments
+//; Frontend CI
 
 pipelineJob('frontend-ci') {
     configure { flowdefinition ->
